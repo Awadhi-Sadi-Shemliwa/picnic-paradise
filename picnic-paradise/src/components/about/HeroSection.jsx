@@ -1,8 +1,10 @@
+import img1 from "../../assets/unforgetable-moments.jpg";
+
 export const HeroSection = () => {
     return (
       <section className="relative h-[600px] w-full overflow-hidden">
         <img
-          src="https://placehold.co/1920x600"
+          src={img1}
           alt="Luxury Events"
           className="w-full h-full object-cover"
         />

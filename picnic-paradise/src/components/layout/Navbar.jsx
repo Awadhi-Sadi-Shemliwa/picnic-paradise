@@ -62,13 +62,13 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-full text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            </button> */}
             
             {isAuthenticated ? (
               <div className="relative">

@@ -1,3 +1,6 @@
+import img1 from '../../assets/luxury-picnic.jpg';
+import img2 from '../../assets/sports-screening.jpg';
+
 const ExperienceCard = ({ image, title, description }) => (
     <article className="bg-[#222] rounded-[16px] overflow-hidden">
       <img src={image} alt={title} className="w-full h-[200px] object-cover" />
@@ -16,17 +19,17 @@ const ExperienceCard = ({ image, title, description }) => (
         </h2>
         <div className="grid max-lg:grid-cols-1 grid-cols-3 gap-8">
           <ExperienceCard
-            image="https://placehold.co/400x300"
+            image='https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
             title="Sip & Paint"
             description="Combine artistic expression with premium wines in an intimate setting."
           />
           <ExperienceCard
-            image="https://placehold.co/400x300"
+            image={img1}
             title="Luxury Picnics"
             description="Elevated outdoor dining experiences in breathtaking locations."
           />
           <ExperienceCard
-            image="https://placehold.co/400x300"
+            image={img2}
             title="Match Screenings"
             description="Premium sports viewing events with luxury amenities."
           />

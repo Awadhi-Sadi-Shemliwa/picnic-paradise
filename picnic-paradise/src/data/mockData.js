@@ -1,5 +1,7 @@
 // Import necessary types
 // Note: In JavaScript, we don't have type imports, so we can skip that part.
+import img1 from '../assets/luxury-picnic.jpg';
+import img2 from '../assets/bigmatch-screening.jpg';
 
 export const events = [
   {
@@ -370,14 +372,14 @@ export const categories = [
     name: 'Luxury Picnics',
     icon: 'Utensils',
     description: 'Elegant outdoor dining experiences',
-    image: 'https://images.unsplash.com/photo-1596238699528-6c586e998a6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    image: img1,
   },
   {
     id: 'match-screenings',
     name: 'Big Match Screenings',
     icon: 'Tv',
     description: 'Watch major sporting events in style',
-    image: 'https://images.unsplash.com/photo-1540317580384-e5d43867caa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80',
+    image: img2,
   },
   {
     id: 'wine-tasting',

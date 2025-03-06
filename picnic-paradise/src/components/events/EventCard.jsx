@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Star, Users, Heart } from 'lucide-react';
-import { Event } from '../../types';
 import Card from '../ui/Card';
 import Badge from '../ui/Badge';
 import { format } from 'date-fns';
+import image1 from '../../assets/event1.jpg';
 
 const EventCard = ({ 
   event, 
@@ -26,11 +26,11 @@ const EventCard = ({
       <Card 
         hoverable 
         premium={event.featured}
-        className="h-full flex flex-col bg-white dark:bg-gray-800"
+        className="h-full flex flex-col bg-gradient-to-br from-slate-300 via-gray-700 to-neutral-900 dark:bg-gradient-to-br dark:from-blue-800 dark:via-gray-700 dark:to-slate-300"
       >
         <div className="relative">
           <img 
-            src={event.images.thumbnail} 
+            src={image1} 
             alt={event.title}
             className="w-full h-48 object-cover"
           />

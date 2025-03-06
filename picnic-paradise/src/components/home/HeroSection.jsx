@@ -5,7 +5,7 @@ import Button from '../ui/Button';
 
 const HeroSection = () => {
   return (
-    <div className="relative h-[80vh] min-h-[600px] overflow-hidden bg-gradient-to-br from-purple-300 via-blue-300 to-blue-400 dark:bg-gradient-to-br dark:from-purple-700 dark:via-blue-700 dark:to-blue-800">
+    <div className="relative h-[80vh] min-h-[600px] overflow-hidden bg-gradient-to-br from-slate-300 via-gray-700 to-neutral-900 dark:bg-gradient-to-br dark:from-slate-300 dark:via-gray-700 dark:to-blue-800">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -13,7 +13,7 @@ const HeroSection = () => {
           backgroundImage: 'url(https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80)',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/20"></div>
       </div>
       
       {/* Content */}
@@ -28,7 +28,7 @@ const HeroSection = () => {
             Curated premium events for those who appreciate the finer things in life. From exclusive sip & paint sessions to luxury picnics and VIP match screenings.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 text-white/70">
             <Link to="/events" className="flex-grow sm:flex-grow-0">
               <Button size="lg" fullWidth>
                 Explore Events

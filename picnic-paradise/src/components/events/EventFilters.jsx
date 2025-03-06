@@ -66,7 +66,7 @@ const EventFilters = ({
   };
 
   return (
-    <div className="mb-8 bg-gradient-to-br from-purple-300 via-blue-300 to-blue-400 p-4">
+    <div className="mb-8  p-4">
       <div className="flex flex-col md:flex-row gap-4">
         <div className="flex-grow">
           <Input
@@ -87,12 +87,12 @@ const EventFilters = ({
       </div>
 
       {isOpen && (
-        <div className="mt-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div className="mt-4 p-4 bg-gradient-to-br from-slate-300 via-gray-700 to-neutral-900 dark:bg-gradient-to-br dark:from-slate-300 dark:via-gray-700 dark:to-blue-800 rounded-lg shadow-md">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-medium">Filter Events</h3>
             <button
               onClick={toggleFilter}
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              className="text-gray-200 hover:text-gray-200 dark:text-gray-400 dark:hover:text-gray-300"
             >
               <X size={20} />
             </button>

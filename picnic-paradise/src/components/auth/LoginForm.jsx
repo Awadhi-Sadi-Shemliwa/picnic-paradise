@@ -30,7 +30,7 @@ const LoginForm = () => {
   };
   
   return (
-    <div className="max-w-md w-full mx-auto p-6 bg-gradient-to-br from-purple-300 via-blue-300 to-blue-400 dark:bg-gradient-to-br dark:from-purple-700 dark:via-blue-700 dark:to-blue-800 rounded-lg shadow-md">
+    <div className="max-w-md w-full mx-auto p-6 bg-gradient-to-br from-slate-300 via-gray-700 to-neutral-900 dark:bg-gradient-to-br dark:from-slate-300 dark:via-gray-700 dark:to-blue-700 rounded-lg shadow-md">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-serif font-bold text-gray-900 dark:text-white">Welcome Back</h2>
         <p className="text-gray-600 dark:text-gray-300 mt-2">Sign in to access your account</p>

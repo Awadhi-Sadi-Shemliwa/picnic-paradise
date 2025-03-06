@@ -12,13 +12,44 @@ import TestimonialsSection from './components/home/TestimonialsSection';
 import NewsletterSection from './components/home/NewsletterSection';
 import LoginForm from './components/auth/LoginForm';
 import RegisterForm from './components/auth/RegisterForm';
-import Button from './components/ui/Button';
-import Card from './components/ui/Card';
-import Input from './components/ui/Input';
-import Badge from './components/ui/Badge';
+import Categories from './components/categories/Categories';
+import About from './components/about/About';
+import Contacts from './components/contacts/Contacts';
+// import Button from './components/ui/Button';
+// import Card from './components/ui/Card';
+// import Input from './components/ui/Input';
+// import Badge from './components/ui/Badge';
 
 // Mock data for demonstration (replace with actual data or API calls)
 const mockEvents = [
+  {
+    id: '1',
+    title: 'Luxury Sip & Paint',
+    date: new Date().toISOString(),
+    time: '7:00 PM',
+    location: { city: 'New York' },
+    images: { thumbnail: 'https://example.com/thumbnail.jpg' },
+    shortDescription: 'An exclusive evening of art and wine.',
+    rating: 4.5,
+    reviews: [],
+    availableSpots: 10,
+    price: 99.99,
+    featured: true,
+  },
+  {
+    id: '1',
+    title: 'Luxury Sip & Paint',
+    date: new Date().toISOString(),
+    time: '7:00 PM',
+    location: { city: 'New York' },
+    images: { thumbnail: 'https://example.com/thumbnail.jpg' },
+    shortDescription: 'An exclusive evening of art and wine.',
+    rating: 4.5,
+    reviews: [],
+    availableSpots: 10,
+    price: 99.99,
+    featured: true,
+  },
   {
     id: '1',
     title: 'Luxury Sip & Paint',
@@ -39,7 +70,7 @@ const mockEvents = [
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-purple-300 via-blue-300 to-blue-400 dark:bg-gradient-to-br dark:from-purple-700 dark:via-blue-700 dark:to-blue-800">
+      <div className="min-h-screen bg-gradient-to-br from-slate-300 via-gray-700 to-neutral-900 dark:bg-gradient-to-br dark:from-slate-300 dark:via-gray-700 dark:to-blue-600">
         <Navbar />
         <main>
           <Routes>
@@ -62,6 +93,9 @@ function App() {
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/events/:id" element={<EventCard event={mockEvents[0]} />} />
             <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contacts" element={<Contacts />} />
           </Routes>
         </main>
         <Footer />

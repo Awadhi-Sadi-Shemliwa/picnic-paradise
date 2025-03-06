@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Event } from '../../types';
 import EventsGrid from '../events/EventsGrid';
 import { useAuth } from '../../context/AuthContext';
 
@@ -14,7 +13,7 @@ const FeaturedEvents = ({
   const savedEvents = isAuthenticated && user ? user.savedEvents : [];
   
   return (
-    <section className="py-12 bg-gradient-to-br from-purple-300 via-blue-300 to-blue-400 dark:bg-gradient-to-br dark:from-purple-700 dark:via-blue-700 dark:to-blue-800">
+    <section className="py-12 bg-gradient-to-br from-slate-300 via-gray-700 to-neutral-900 dark:bg-gradient-to-br dark:from-blue-800 dark:via-gray-700 dark:to-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-serif font-bold text-gray-900 dark:text-white">

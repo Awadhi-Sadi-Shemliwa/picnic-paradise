@@ -7,7 +7,7 @@ const Input = forwardRef(
         {label && (
           <label
             htmlFor={props.id}
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+            className="block text-sm font-medium text-slate-950 dark:text-gray-700 mb-1"
           >
             {label}
           </label>
@@ -23,7 +23,7 @@ const Input = forwardRef(
             className={`
               block rounded-md shadow-sm border-gray-300 dark:border-gray-700
               focus:ring-primary focus:border-primary
-              dark:bg-secondary dark:text-white
+              dark:bg-secondary dark:text-gray-800
               ${leftIcon ? 'pl-10' : ''}
               ${rightIcon ? 'pr-10' : ''}
               ${fullWidth ? 'w-full' : ''}

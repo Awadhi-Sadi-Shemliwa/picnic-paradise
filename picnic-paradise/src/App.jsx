@@ -20,7 +20,12 @@ import Contacts from './components/contacts/Contacts';
 import UserNavbar from './Roles/user/UserNavbar';
 import UserDashboard from './Roles/user/UserDashboard';
 import CartPage from './Roles/user/CartPage';
+import UserProfile from './Roles/user/UserProfile';
+import UserCategory from './Roles/user/UserCategory';
+import CheckoutPage from './Roles/user/Checkout';
+import EventDetailPage from './Roles/user/EventDetailPage';
 import SupportPage from './Roles/user/SupportPage';
+
 
 // Admin Components
 import AdminNavbar from './Roles/admin/AdminNavbar';
@@ -68,6 +73,10 @@ function App() {
           {/* User Routes */}
           <Route path="/user/*" element={<><UserNavbar /><UserDashboard /></>} />
           <Route path="/cart" element={<><UserNavbar /><CartPage /></>} />
+          <Route path="/eventdetail" element={<><UserNavbar /><EventDetailPage /></>} />
+          <Route path="/profile" element={<><UserNavbar /><UserProfile /></>} />
+          <Route path="/user-category" element={<><UserNavbar /><UserCategory /></>} />
+          <Route path="/checkout" element={<><UserNavbar /><CheckoutPage /></>} />
           <Route path="/support" element={<><UserNavbar /><SupportPage /></>} />
 
           {/* Admin Routes */}

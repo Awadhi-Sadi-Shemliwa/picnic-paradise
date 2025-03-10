@@ -17,16 +17,16 @@ const UserNavbar = () => {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
-                  to="/categories"
+                  to="/user-category"
                   className={`${
-                    isActive('/categories') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    isActive('/user-category') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
                   } px-3 py-2 rounded-md text-sm font-medium`}
                 >
                   Categories
                 </Link>
 
                 <Link
-                  to="/events"
+                  to="/eventdetail"
                   className={`${
                     isActive('/events') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
                   } px-3 py-2 rounded-md text-sm font-medium`}
@@ -34,14 +34,6 @@ const UserNavbar = () => {
                   Events
                 </Link>
 
-                <Link
-                  to="/about"
-                  className={`${
-                    isActive('/about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                  } px-3 py-2 rounded-md text-sm font-medium`}
-                >
-                  About
-                </Link>
 
                 <Link
                   to="/support"

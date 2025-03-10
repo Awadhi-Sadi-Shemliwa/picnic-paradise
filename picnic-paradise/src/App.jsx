@@ -15,10 +15,22 @@ import RegisterForm from './components/auth/RegisterForm';
 import Categories from './components/categories/Categories';
 import About from './components/about/About';
 import Contacts from './components/contacts/Contacts';
-// import Button from './components/ui/Button';
-// import Card from './components/ui/Card';
-// import Input from './components/ui/Input';
-// import Badge from './components/ui/Badge';
+
+// User Components
+import UserNavbar from './Roles/user/UserNavbar';
+import UserDashboard from './Roles/user/UserDashboard';
+import CartPage from './Roles/user/CartPage';
+import SupportPage from './Roles/user/SupportPage';
+
+// Admin Components
+import AdminNavbar from './Roles/admin/AdminNavbar';
+import AdminDashboard from './Roles/admin/AdminDashboard';
+import ManageEvents from './Roles/admin/ManageEvents';
+import ManageUsers from './Roles/admin/ManageUsers';
+
+// Support Components
+import SupportDashboard from './Roles/support/SupportDashboard';
+import ManageTickets from './Roles/support/ManageTickets';
 
 // Mock data for demonstration (replace with actual data or API calls)
 const mockEvents = [
@@ -35,70 +47,41 @@ const mockEvents = [
     availableSpots: 10,
     price: 99.99,
     featured: true,
-  },
-  {
-    id: '1',
-    title: 'Luxury Sip & Paint',
-    date: new Date().toISOString(),
-    time: '7:00 PM',
-    location: { city: 'New York' },
-    images: { thumbnail: 'https://example.com/thumbnail.jpg' },
-    shortDescription: 'An exclusive evening of art and wine.',
-    rating: 4.5,
-    reviews: [],
-    availableSpots: 10,
-    price: 99.99,
-    featured: true,
-  },
-  {
-    id: '1',
-    title: 'Luxury Sip & Paint',
-    date: new Date().toISOString(),
-    time: '7:00 PM',
-    location: { city: 'New York' },
-    images: { thumbnail: 'https://example.com/thumbnail.jpg' },
-    shortDescription: 'An exclusive evening of art and wine.',
-    rating: 4.5,
-    reviews: [],
-    availableSpots: 10,
-    price: 99.99,
-    featured: true,
-  },
-  // Add more mock events as needed
+  }
 ];
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-slate-300 via-gray-700 to-neutral-900 dark:bg-gradient-to-br dark:from-slate-300 dark:via-gray-700 dark:to-blue-600">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={
-              <>
-                <HeroSection />
-                <CategoryShowcase />
-                <FeaturedEvents events={mockEvents} />
-                <TestimonialsSection />
-                <NewsletterSection />
-              </>
-            } />
-            <Route path="/events" element={
-              <div className="container mx-auto p-4">
-                <EventFilters onFilter={(filters) => console.log('Filtered:', filters)} />
-                <EventsGrid events={mockEvents} />
-              </div>
-            } />
-            <Route path="/login" element={<LoginForm />} />
-            <Route path="/register" element={<RegisterForm />} />
-            <Route path="/events/:id" element={<EventCard event={mockEvents[0]} />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contacts" element={<Contacts />} />
-          </Routes>
-        </main>
-        <Footer />
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/" element={<><Navbar /><HeroSection /><CategoryShowcase /><FeaturedEvents events={mockEvents} /><TestimonialsSection /><NewsletterSection /><Footer /></>} />
+          <Route path="/events" element={<><Navbar /><div className="container mx-auto p-4"><EventFilters onFilter={(filters) => console.log('Filtered:', filters)} /><EventsGrid events={mockEvents} /></div><Footer /></>} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/events/:id" element={<EventCard event={mockEvents[0]} />} />
+          <Route path="/categories" element={<><Navbar /><Categories /><Footer /></>} />
+          <Route path="/about" element={<><Navbar /><About /><Footer /></>} />
+          <Route path="/contacts" element={<><Navbar /><Contacts /><Footer /></>} />
+
+          {/* User Routes */}
+          <Route path="/user/*" element={<><UserNavbar /><UserDashboard /></>} />
+          <Route path="/cart" element={<><UserNavbar /><CartPage /></>} />
+          <Route path="/support" element={<><UserNavbar /><SupportPage /></>} />
+
+          {/* Admin Routes */}
+          <Route path="/admin" element={<><AdminNavbar /><AdminDashboard /></>} />
+          <Route path="/admin/events" element={<><AdminNavbar /><ManageEvents /></>} />
+          <Route path="/admin/users" element={<><AdminNavbar /><ManageUsers /></>} />
+
+          {/* Support Routes */}
+          <Route path="/support-dashboard" element={<SupportDashboard />} />
+          <Route path="/support/tickets" element={<ManageTickets />} />
+
+          {/* Catch all route */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </div>
     </Router>
   );

@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sun, Moon, User, LogOut, Heart, Calendar, Settings, ChevronDown } from 'lucide-react';
-import { useTheme } from '../../context/ThemeContext';
 import { useAuth } from '../../context/AuthContext';
 import Button from '../ui/Button';
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useTheme();
   const { isAuthenticated, user, logout, isHost } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -62,14 +60,6 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            {/* <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button> */}
-            
             {isAuthenticated ? (
               <div className="relative">
                 <button
@@ -166,13 +156,6 @@ const Navbar = () => {
           </div>
           
           <div className="flex md:hidden items-center">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none mr-2"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"

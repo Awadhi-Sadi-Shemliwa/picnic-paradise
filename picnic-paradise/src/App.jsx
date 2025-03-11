@@ -34,6 +34,8 @@ import ManageEvents from './Roles/admin/ManageEvents';
 import ManageUsers from './Roles/admin/ManageUsers';
 
 // Support Components
+import LiveChat from './Roles/support/LiveChat';
+import SupportNavbar from './Roles/support/SupportNavbar';
 import SupportDashboard from './Roles/support/SupportDashboard';
 import ManageTickets from './Roles/support/ManageTickets';
 
@@ -77,7 +79,7 @@ function App() {
           <Route path="/profile" element={<><UserNavbar /><UserProfile /></>} />
           <Route path="/user-category" element={<><UserNavbar /><UserCategory /></>} />
           <Route path="/checkout" element={<><UserNavbar /><CheckoutPage /></>} />
-          <Route path="/support" element={<><UserNavbar /><SupportPage /></>} />
+          <Route path="/help" element={<><UserNavbar /><SupportPage /></>} />
 
           {/* Admin Routes */}
           <Route path="/admin" element={<><AdminNavbar /><AdminDashboard /></>} />
@@ -85,8 +87,9 @@ function App() {
           <Route path="/admin/users" element={<><AdminNavbar /><ManageUsers /></>} />
 
           {/* Support Routes */}
-          <Route path="/support-dashboard" element={<SupportDashboard />} />
-          <Route path="/support/tickets" element={<ManageTickets />} />
+          <Route path="/support-dashboard" element={<><SupportNavbar /><SupportDashboard /></>} />
+          <Route path="/support-tickets" element={<><SupportNavbar /><ManageTickets /></>} />
+          <Route path="/live-chat" element={<><SupportNavbar /><LiveChat /></>} />
 
           {/* Catch all route */}
           <Route path="*" element={<Navigate to="/" replace />} />

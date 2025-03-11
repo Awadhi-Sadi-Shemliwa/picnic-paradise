@@ -39,6 +39,25 @@ const HeroSection = () => {
                 Browse Categories
               </Button>
             </Link>
+
+{/* roles overview */}
+            <Link to="/user" className="flex-grow sm:flex-grow-0">
+              <Button size="lg" fullWidth>
+                 USER 
+              </Button>
+            </Link>
+
+            <Link to="/admin" className="flex-grow sm:flex-grow-0">
+              <Button size="lg" fullWidth>
+                ADMIN 
+              </Button>
+            </Link>
+
+            <Link to="/support-dashboard" className="flex-grow sm:flex-grow-0">
+              <Button size="lg" fullWidth>
+                SUPPORT
+              </Button>
+            </Link>
           </div>
           
           {/* Search Bar */}
